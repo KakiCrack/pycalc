@@ -1,19 +1,12 @@
-def multiplication():
-    while True:
-        try:
-            num1 = input("Entrez le premier nombre: ")
-            num2 = input("Entrez le deuxième nombre: ")
+def multiply(a, b):
+    result = 0
+    negative = (a < 0) != (b < 0)  
+    a, b = abs(a), abs(b)
 
-            num1 = float(num1)
-            num2 = float(num2)
+    for z in range(b):
+        result += a
 
-            resultat = num1 * num2
-            print("Résultat :", resultat)
-            break
-
-        except ValueError:
-            print("Erreur : veuillez entrer des nombres valides.")
-
+    return -result if negative else result
 
 
 def addition():
@@ -53,3 +46,5 @@ def division() :
 division()
 addition()
 multiplication()
+
+
